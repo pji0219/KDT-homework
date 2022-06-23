@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈페이지 따라 만들기</title>
+    <style>
+      body {
+        background-image: url('https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: right;
+        height: 3000px;
+        margin: 0;
+      }
+
+      .side-bar {
+        position: relative;
+        left: 20px;
+        height: 3000px;
+        width: 100px;
+        background: linear-gradient(orange, black);
+      }
+
+      .top-container {
+        width: 100%;
+        height: 70px;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        top: 0;
+      }
+
+      .item1 {
+        height: 50px;
+        border-radius: 30px;
+        font-weight: 700;
+        flex-basis: 150px;
+        background-color: cornflowerblue;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+      .item1:hover {
+        background-color: blue;
+        cursor: pointer;
+      }
+
+      .bottom-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        background-color: orange;
+      }
+
+      .item2 {
+        flex-basis: 150px;
+        height: 50px;
+        border-radius: 30px;
+        font-weight: 700;
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+      .item2:hover {
+        background-color: brown;
+        cursor: pointer;
+      }
+
+      .bottom-container > div:nth-child(1) {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .bottom-container > div:nth-child(2) {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .bottom-container > div:nth-child(3) {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .bottom-container > div:nth-child(4) {
+        flex-grow: 2;
+        flex-basis: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="side-bar"></div>
+    <div class="top-container">
+      <div class="item1">item1</div>
+      <div class="item1">item2</div>
+      <div class="item1">item3</div>
+      <div class="item1">item4</div>
+    </div>
+    <div class="bottom-container">
+      <div class="item2">비율1</div>
+      <div class="item2">비율1</div>
+      <div class="item2">비율1</div>
+      <div class="item2">비율2</div>
+    </div>
+  </body>
+</html>
