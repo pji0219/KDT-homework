@@ -37,23 +37,21 @@ writeBtn.addEventListener('click', () => {
   // div 태그 생성
   const schedule = document.createElement('div');
 
-  // 추후에 삭제 기능에서 다른 div태그는 안지우고 추가된 일정만 지우기 위해서 클래스 추가
+  // css로 마우스 호버시 커서를 생기게 하려고 위해서 클래스 추가
   schedule.classList.add('schedule');
 
   // div태그에 input창의 값을 텍스트로 넣어줌
   const value = contentInput.value;
   schedule.textContent = value;
 
+  // 해당 일정만 삭제 하기위해서 자기 스스로를 삭제하는 이벤트 리스너를 달아줌
+  schedule.addEventListener('click', () => {
+    schedule.remove();
+  });
+
   // 클릭한 날짜에 div태그를 자식 태그로 추가
   ElPosition.append(schedule);
 
   // input창 비우기
   contentInput.value = '';
-});
-
-// 일정 삭제
-calendar.addEventListener('click', (e) => {
-  if (e.target.className === 'schedule') {
-    $('.schedule').remove();
-  }
 });
