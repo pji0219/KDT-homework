@@ -979,7 +979,7 @@ header .badges .badge {
   right: 320px;
   transform: translate(800px, 0);
 }
-/* 호버 두번 */
+
 .store.animate .inner .store__title_1 {
   transform: translate(0px, 0);
   transition: 2s;
